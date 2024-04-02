@@ -1,0 +1,10 @@
+main {
+    flex-grow: 1;
+    padding: 45px 35px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+    gap: 40px;
+}

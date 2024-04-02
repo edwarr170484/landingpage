@@ -1,0 +1,22 @@
+.headers {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1013px;
+
+
+    & h1 {
+        font-size: 59px;
+        line-height: 1;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    & h2 {
+        font-size: 59px;
+        line-height: 1;
+        font-weight: 400;
+        margin: 0;
+    }
+}
