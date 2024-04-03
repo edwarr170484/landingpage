@@ -1,12 +1,13 @@
 @import "../fonts/fontawesome/faces.min.css";
 @import "../fonts/inter/faces.css";
+@import "../fonts/rubik/faces.css";
 :root {
-  --color-black: #1E1E1E;
-  --color-white: #FFFFFF;
-  --color-gray: #EDEDED;
-  --color-grayBg: #FFFFFF4D;
-  --color-red: #D1062B;
-  --font-family: "Inter";
+  --color-black: #1e1e1e;
+  --color-white: #ffffff;
+  --color-gray: #ededed;
+  --color-grayBg: #ffffff4d;
+  --color-red: #d1062b;
+  --font-family: "Inter", sans-serif;
 }
 
 .wrapper {
@@ -18,6 +19,68 @@
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+header {
+  padding: 19px 10px;
+}
+
+.header {
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4.35px);
+  padding: 17px 28px 17px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logotype {
+  max-width: 390px;
+}
+.header__contacts {
+  display: flex;
+  gap: 150px;
+  color: var(--color-black);
+}
+@media (max-width: 1199.98px) {
+  .header__contacts {
+    gap: 50px;
+  }
+}
+
+.logotype {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  display: block;
+  background: var(--color-red);
+}
+.logotype img {
+  max-width: 100%;
+}
+
+.contact-panel__head {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 11px;
+}
+.contact-panel__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 4px;
+}
+.contact-panel__icon_hidden {
+  opacity: 0;
+}
+.contact-panel__text {
+  font-size: 16px;
+  line-height: 20px;
+}
+.contact-panel__text a {
+  color: var(--color-black);
+  text-decoration: none;
 }
 
 main {
@@ -36,6 +99,12 @@ main {
   backdrop-filter: blur(41.15px);
   border-radius: 12px;
   padding: 37px 30px 41px 42px;
+  flex-shrink: 0;
+}
+@media (max-width: 1399.98px) {
+  .phones {
+    padding: 30px;
+  }
 }
 .phones__items {
   display: grid;
@@ -47,7 +116,7 @@ main {
   color: var(--color-gray);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 9px;
 }
 .phones__item:last-child {
   grid-area: 2/1/3/3;
@@ -56,7 +125,13 @@ main {
   margin: 0;
   font-size: 40px;
   line-height: 48px;
-  font-weight: 400;
+  font-weight: 300;
+}
+@media (max-width: 1399.98px) {
+  .phones__city {
+    font-size: 35px;
+    line-height: 1;
+  }
 }
 .phones__number {
   color: var(--color-gray);
@@ -67,6 +142,12 @@ main {
   line-height: 29px;
   text-decoration: none;
 }
+@media (max-width: 1399.98px) {
+  .phones__number {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
 .phones .button {
   margin-top: 48px;
 }
@@ -75,12 +156,23 @@ main {
   border: none;
   background-color: var(--color-red);
   color: var(--color-white);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;
   line-height: 1;
   border-radius: 54px;
-  padding: 20px 32px 23px;
+  padding: 21px 32px 23px;
   cursor: pointer;
+  font-family: var(--font-family);
+}
+@media (max-width: 1199.98px) {
+  .button {
+    font-size: 20px;
+    padding: 16px 19px 18px;
+  }
+}
+.button_small {
+  font-size: 20px;
+  padding: 16px 19px 18px;
 }
 .button:hover, .button:focus {
   outline: none;
@@ -94,17 +186,124 @@ main {
   gap: 15px;
   max-width: 1013px;
 }
+@media (max-width: 1399.98px) {
+  .headers {
+    max-width: 100%;
+  }
+}
 .headers h1 {
   font-size: 59px;
   line-height: 1;
   font-weight: 700;
   margin: 0;
 }
+@media (max-width: 1399.98px) {
+  .headers h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .headers h1 {
+    font-size: 45px;
+  }
+}
 .headers h2 {
   font-size: 59px;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
+}
+@media (max-width: 1399.98px) {
+  .headers h2 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .headers h2 {
+    font-size: 40px;
+  }
+}
+
+.modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4.35px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+}
+.modal.show {
+  opacity: 1;
+  z-index: 999;
+}
+.modal__dialog {
+  width: 100%;
+  max-width: 500px;
+  background: var(--color-white);
+  color: var(--color-black);
+  padding: 15px;
+  border-radius: 10px;
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.modal__header h4 {
+  margin: 0;
+  font-size: 30px;
+}
+.modal__header button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+.modal__content {
+  font-size: 14px;
+}
+.modal__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+.form-control__control {
+  width: 100%;
+  height: 55px;
+  border: 1px solid var(--color-gray);
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+footer {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+footer h2 {
+  font-size: 73px;
+  line-height: 76px;
+  padding: 44px 28px;
+  margin: 0;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+@media (max-width: 1199.98px) {
+  footer h2 {
+    font-size: 56px;
+    line-height: 59px;
+  }
 }
 
 * {
@@ -118,6 +317,16 @@ body {
   width: 100%;
   height: 100%;
   font-family: var(--font-family);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

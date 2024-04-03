@@ -1,22 +1,38 @@
 .headers {
-    color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 1013px;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1013px;
 
+  @media (max-width: 1399.98px) {
+    max-width: 100%;
+  }
 
-    & h1 {
-        font-size: 59px;
-        line-height: 1;
-        font-weight: 700;
-        margin: 0;
+  & h1 {
+    font-size: 59px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 0;
+
+    @media (max-width: 1399.98px) {
+      font-size: 50px;
     }
-
-    & h2 {
-        font-size: 59px;
-        line-height: 1;
-        font-weight: 400;
-        margin: 0;
+    @media (max-width: 1199.98px) {
+      font-size: 45px;
     }
+  }
+
+  & h2 {
+    font-size: 59px;
+    line-height: 1;
+    font-weight: 300;
+    margin: 0;
+    @media (max-width: 1399.98px) {
+      font-size: 45px;
+    }
+    @media (max-width: 1199.98px) {
+      font-size: 40px;
+    }
+  }
 }

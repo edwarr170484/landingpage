@@ -11,7 +11,53 @@
 <body>
     <div class="wrapper">
         <header>
+            <div class="header">
+                <div class="header__logotype">
+                    <a class="logotype" href="/"></a>
+                </div>
+                <div class="header__contacts">
+                    <div class="contact-panel">
+                        <div class="contact-panel__head">С нами можно связаться</div>
+                        <div class="contact-panel__item">
+                            <div class="contact-panel__icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-panel__text">
+                                <a href="mailto:AutoDiamond@mail.ru">AutoDiamond@mail.ru</a>
+                            </div>
+                        </div>
+                        <div class="contact-panel__item">
+                            <div class="contact-panel__icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-panel__text">
+                                <a href="tel:79614265799">+7 961 426 57 99</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-panel">
+                        <div class="contact-panel__head">График работы</div>
+                        <div class="contact-panel__item">
+                            <div class="contact-panel__icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="contact-panel__text">
+                                Понедельник - пятница: 9.00 - 19.00
 
+                            </div>
+                        </div>
+                        <div class="contact-panel__item">
+                            <div class="contact-panel__icon contact-panel__icon_hidden">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="contact-panel__text">
+                                <a href="tel:79614265799">Суббота - воскресенье:  9.00 - 17.00</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button_small" onclick="modal.open()">Оставить заявку</button>
+            </div>
         </header>
         <main>
             <div class="headers">
@@ -36,10 +82,38 @@
                             8-844-260-03-89</a>
                     </div>
                 </div>
-                <button class="button">Оставить заявку</button>
+                <button class="button" onclick="modal.open()">Оставить заявку</button>
             </div>
         </main>
+        <footer>
+            <h2>Запчасти и ремонт китайских авто </h2>
+        </footer>
     </div>
+    <div class="modal" onclick="modal.close()">
+        <div class="modal__dialog" onclick="event.stopPropagation()">
+            <form action="mail.php" method="POST">
+                <div class="modal__header">
+                    <h4>Оставить заявку</h4>
+                    <button onclick="modal.close()" type="button"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal__content">
+                    <div class="form-control">
+                        <input name="firstname" type="text" class="form-control__control" placeholder="Введите Ваше Имя"
+                            required>
+                    </div>
+                    <div class="form-control">
+                        <input name="phonenumb" id="phonenumb" type="text" class="form-control__control"
+                            placeholder="Введите Номер Телефона" required>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button type="submit" class="button button_small">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
     <script src="./js/custom.js"></script>
 </body>
 

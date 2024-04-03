@@ -1,0 +1,18 @@
+footer {
+  background: var(--color-white);
+  color: var(--color-black);
+
+  & h2 {
+    font-size: 73px;
+    line-height: 76px;
+    padding: 44px 28px;
+    margin: 0;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+
+    @media (max-width: 1199.98px) {
+      font-size: 56px;
+      line-height: 59px;
+    }
+  }
+}
