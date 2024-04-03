@@ -2,6 +2,10 @@ footer {
   background: var(--color-white);
   color: var(--color-black);
 
+  @media(max-width: 1040px) {
+    display: none;
+  }
+
   & h2 {
     font-size: 73px;
     line-height: 76px;

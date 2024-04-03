@@ -7,4 +7,20 @@ main {
     position: relative;
     z-index: 2;
     gap: 40px;
+    background: url("../images/main.jpg") center center no-repeat;
+    background-size: cover;
+    padding-top: 160px;
+
+    @media(max-width: 1040px) {
+        flex-direction: column;
+        padding: 15px 35px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    @media(max-width:575.98px) {
+        padding: 15px;
+        padding-top: 160px;
+    }
 }

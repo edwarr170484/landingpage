@@ -9,15 +9,47 @@
   padding: 21px 32px 23px;
   cursor: pointer;
   font-family: var(--font-family);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 
   @media (max-width: 1199.98px) {
     font-size: 20px;
     padding: 16px 19px 18px;
   }
 
+  & i {
+    display: none;
+  }
+
+
+
   &_small {
     font-size: 20px;
     padding: 16px 19px 18px;
+
+    @media(max-width:670px) {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 18px;
+      padding: 0;
+
+      & i {
+        display: block;
+      }
+
+      & span {
+        display: none;
+      }
+    }
+
+    @media(max-width:390px) {
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+    }
   }
 
   &:hover,
