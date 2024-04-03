@@ -1,5 +1,4 @@
 footer {
-  background: var(--color-white);
   color: var(--color-black);
 
   @media(max-width: 1040px) {
@@ -9,7 +8,8 @@ footer {
   & h2 {
     font-size: 73px;
     line-height: 76px;
-    padding: 44px 28px;
+    padding: 53px 28px;
+    padding-left: 0;
     margin: 0;
     font-weight: 400;
     font-family: "Rubik", sans-serif;

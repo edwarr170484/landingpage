@@ -1,5 +1,5 @@
 .phones {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(41.15px);
   border-radius: 12px;
   padding: 37px 30px 41px 42px;
@@ -17,7 +17,7 @@
   &__items {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 80px;
     row-gap: 30px;
 
     @media(max-width: 1040px) {
@@ -92,7 +92,7 @@
   }
 
   & .button {
-    margin-top: 48px;
+    margin-top: 65px;
 
     @media(max-width: 1040px) {
       margin: 30px auto 0;

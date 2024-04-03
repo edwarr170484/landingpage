@@ -2,9 +2,14 @@ header {
   padding: 19px 10px;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 20px);
   z-index: 99;
+
+  @media(max-width:1070px) {
+    width: 100%;
+  }
 
   @media(max-width: 1040px) {
     padding: 0;
@@ -13,12 +18,13 @@ header {
 
 .header {
   border-radius: 17px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4.35px);
   padding: 17px 28px 17px 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 
   @media(max-width: 1040px) {
     border-radius: 0;

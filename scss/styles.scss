@@ -25,10 +25,23 @@ body {
   height: 100%;
   font-family: var(--font-family);
 }
+
+body {
+  padding-left: 10px;
+  padding-right: 10px;
+  /*background: url("../images/bg.jpg") center top no-repeat;*/
+
+  @media(max-width:1070px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 a:hover,
 a:focus {
   text-decoration: none;
 }
+
 button:focus {
   outline: none;
   box-shadow: none;

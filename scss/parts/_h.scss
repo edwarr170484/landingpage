@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 15px;
   max-width: 1013px;
+  transform: translateY(-21px);
 
   @media (max-width: 1399.98px) {
     max-width: 100%;
@@ -42,6 +43,7 @@
     line-height: 1;
     font-weight: 300;
     margin: 0;
+    transform: translateY(10px);
 
     @media (max-width: 1399.98px) {
       font-size: 45px;
