@@ -68,7 +68,7 @@ header {
 }
 .header__contacts {
   display: flex;
-  gap: 150px;
+  gap: 80px;
   color: var(--color-black);
 }
 @media (max-width: 1199.98px) {
@@ -76,13 +76,7 @@ header {
     gap: 50px;
   }
 }
-@media (max-width: 1040px) {
-  .header__contacts {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-@media (max-width: 670px) {
+@media (max-width: 767.98px) {
   .header__contacts {
     display: none;
   }
@@ -94,10 +88,7 @@ header {
 .header__buttons .button {
   display: none;
 }
-.header__buttons .button:first-child {
-  display: flex;
-}
-@media (max-width: 670px) {
+@media (max-width: 767.98px) {
   .header__buttons .button {
     display: flex;
   }
@@ -114,9 +105,10 @@ header {
   font-weight: 700;
   margin-bottom: 11px;
 }
-@media (max-width: 1040px) {
+@media (max-width: 800px) {
   .contact-panel__head {
-    display: none;
+    font-size: 17px;
+    line-height: 19px;
   }
 }
 .contact-panel__item {
@@ -137,7 +129,7 @@ header {
   font-size: 16px;
   line-height: 20px;
 }
-@media (max-width: 1040px) {
+@media (max-width: 800px) {
   .contact-panel__text {
     font-size: 14px;
     line-height: 18px;
@@ -152,14 +144,15 @@ main {
   flex-grow: 1;
   padding: 45px 35px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 2;
   gap: 47px;
   background: url("../images/main.jpg") center bottom no-repeat;
   background-size: cover;
-  padding-top: 465px;
+  padding-top: 220px;
+  padding-bottom: 60px;
   border-radius: 17px;
 }
 @media (max-width: 1070px) {
@@ -187,19 +180,12 @@ main {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(41.15px);
   border-radius: 12px;
-  padding: 37px 30px 41px 42px;
+  padding: 55px 30px 41px 42px;
   flex-shrink: 0;
-}
-@media (max-width: 1399.98px) {
-  .phones {
-    padding: 30px;
-  }
-}
-@media (max-width: 1040px) {
-  .phones {
-    width: fit-content;
-    padding: 20px 15px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
 }
 .phones__items {
   display: grid;
@@ -317,7 +303,7 @@ main {
   font-size: 20px;
   padding: 16px 19px 18px;
 }
-@media (max-width: 670px) {
+@media (max-width: 767.98px) {
   .button_small {
     width: 60px;
     height: 60px;
@@ -349,21 +335,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 1013px;
   transform: translateY(-21px);
 }
-@media (max-width: 1399.98px) {
-  .headers {
-    max-width: 100%;
-  }
-}
-@media (max-width: 1040px) {
-  .headers {
-    width: 100%;
-  }
-  .headers > * {
-    text-align: center;
-  }
+.headers > * {
+  text-align: center;
 }
 .headers h1 {
   font-size: 59px;
@@ -387,16 +362,11 @@ main {
   }
 }
 .headers h2 {
-  font-size: 59px;
+  font-size: 45px;
   line-height: 1;
   font-weight: 300;
   margin: 0;
   transform: translateY(10px);
-}
-@media (max-width: 1399.98px) {
-  .headers h2 {
-    font-size: 45px;
-  }
 }
 @media (max-width: 1199.98px) {
   .headers h2 {

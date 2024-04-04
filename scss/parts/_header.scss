@@ -41,19 +41,14 @@ header {
 
   &__contacts {
     display: flex;
-    gap: 150px;
+    gap: 80px;
     color: var(--color-black);
 
     @media (max-width: 1199.98px) {
       gap: 50px;
     }
 
-    @media(max-width: 1040px) {
-      flex-direction: column;
-      gap: 0;
-    }
-
-    @media(max-width:670px) {
+    @media(max-width:767.98px) {
       display: none;
     }
   }
@@ -65,11 +60,7 @@ header {
     & .button {
       display: none;
 
-      &:first-child {
-        display: flex;
-      }
-
-      @media(max-width:670px) {
+      @media(max-width:767.98px) {
         display: flex;
       }
     }
@@ -90,8 +81,9 @@ header {
     font-weight: 700;
     margin-bottom: 11px;
 
-    @media(max-width: 1040px) {
-      display: none;
+    @media(max-width:800px) {
+      font-size: 17px;
+      line-height: 19px;
     }
   }
 
@@ -116,7 +108,7 @@ header {
     font-size: 16px;
     line-height: 20px;
 
-    @media(max-width: 1040px) {
+    @media(max-width:800px) {
       font-size: 14px;
       line-height: 18px;
     }

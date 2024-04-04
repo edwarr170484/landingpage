@@ -23,13 +23,11 @@
     display: none;
   }
 
-
-
   &_small {
     font-size: 20px;
     padding: 16px 19px 18px;
 
-    @media(max-width:670px) {
+    @media(max-width:767.98px) {
       width: 60px;
       height: 60px;
       border-radius: 50%;
